@@ -1,12 +1,14 @@
 title: Dev Tools
 
 tools:
-    - categories:
-          - name: Presentation
-                - name: BrowserFrame
-                  url: https://browserframe.com
-                  description: Make Screenshots of website in a mocked browser window
-          - name: HTML / CSS
-                - name: test
-                  url: example.com
-                  description: Todo
+  - categories:
+      - name: Presentation
+        tools:
+          - name: BrowserFrame
+            url: https://browserframe.com
+            description: Make Screenshots of website in a mocked browser window
+      - name: HTML / CSS
+        tools:
+          - name: test
+            url: example.com
+            description: Todo
