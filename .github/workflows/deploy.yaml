@@ -14,8 +14,8 @@ jobs:
                     php-version: '8.2'
                     tools: 'composer:v2'
 
-            -   name: Debug
-                run: ls -la && pwd
+            -   name: Checkout
+                uses: actions/checkout@v4
 
             -   name: Install
                 run: composer install
