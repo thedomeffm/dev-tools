@@ -1,0 +1,14 @@
+{
+    "name": "thedomeffm/dev-tools",
+    "description": "Meh",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Thedomeffm\\DevTools\\": "src/"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.10",
+        "symfony/yaml": "^7.0"
+    }
+}

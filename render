@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+include_once __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Yaml\Yaml;
+use Thedomeffm\DevTools\Renderer;
+use Thedomeffm\DevTools\RenderOptions;
+
+(new Renderer())->render(
+    new RenderOptions(
+        outputDirectory: __DIR__ . '/public',
+        outputFile: 'index.html',
+        templateDirectory: __DIR__ . '/templates',
+        template: 'index.html.twig',
+        context: Yaml::parseFile(__DIR__ . '/db.yaml'),
+    ),
+);

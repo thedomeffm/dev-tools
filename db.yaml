@@ -1,0 +1,36 @@
+repository:
+    url: https://github.com/thedomeffm/dev-tools
+
+title: Dev Tools
+
+seo:
+    description: This is my repository of cool dev tools that I want to bookmark for me or you.
+    keywords: dev tools, css tools
+
+categories:
+    -   name: Presentation
+        tools:
+            -   name: BrowserFrame
+                url: https://browserframe.com
+                description: Make Screenshots of website in a mocked browser window
+
+    -   name: HTML / CSS
+        tools:
+            -   name: Favicon Generator. For real.
+                url: https://realfavicongenerator.net/
+                description: Generate the common icons (ico, png, manifest whatever wtf) files from your image.
+            -   name: CSS-Gradient
+                url: https://www.css-gradient.com/
+                description: Nice tool to generate css gradients.
+                alternatives:
+                    - name: CSS Gradient
+                      url: https://cssgradient.io/
+
+    -   name: Website Security
+        tools:
+            -   name: Content Security Policy (CSP) Guide
+                url: https://content-security-policy.com/
+                description: Content Security Policy (CSP) is like a bouncer for your website, making sure only the cool, pre-approved scripts get in and keeping the shady ones out. It's the web's way of saying, "You shall not pass!" to potential hackers and rogue code.
+            -   name: Mozilla Observatory
+                url: https://observatory.mozilla.org/
+                description: Let mozilla check your website for easy security improvements like missing headers.

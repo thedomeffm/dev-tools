@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block head %}
+    <meta name="author" content="thedomeffm">
+    <meta name="favourite-food" content="pizza">
+    <meta name="keywords" content="{{ seo.keywords }}">
+    <meta name="description" content="{{ seo.description }}">
+{% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    <link href="/bulma.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <section class="section">
+            <h1 class="title is-1">{{ title }}</h1>
+
+            <p>{{ seo.description }}</p>
+            <p>When you want to add a new Tool just make a PR <a href="{{ repository.url }}">here.</a></p>
+        </section>
+
+        {% for category in categories %}
+            <section class="section">
+                <h4 class="title is-4">{{ category.name }}</h4>
+
+                {% for tool in category.tools %}
+                    <a href="{{ tool.url }}" target="_blank">
+                        <div class="box mb-4">
+                            <div class="columns">
+                                <div class="column is-narrow">
+                                    <img srcset="{{ "#{tool.url}/favicon-32x32.png" }}, {{ "#{tool.url}/favicon-16x16.png" }}"
+                                         src="/fallback_icon.png"
+                                         height="32"
+                                         width="32"
+                                         alt="Icon" />
+                                </div>
+                                <div class="column">
+                                    <h5 class="title is-3">{{ tool.name }}</h5>
+
+                                    <p>{{ tool.description }}</p>
+
+                                    {% if tool.alternatives is defined %}
+                                        <ul>
+                                            {% for alternatives in tool.alternatives %}
+                                                <li><a href="{{ alternatives.url }}">{{ alternatives.name }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </section>
+        {% endfor %}
+    </div>
+{% endblock %}
